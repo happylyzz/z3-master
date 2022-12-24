@@ -1,0 +1,706 @@
+-------- [nlsat] operator() ../src/nlsat/tactic/nlsat_tactic.cpp:145 ---------
+(goal
+  (>= opt (+ x y))
+  (<= opt 2000.0)
+  (= 8.0 (* z z))
+  (= (+ (* x x) (* y y)) 8.0))
+------------------------------------------------
+-------- [nlsat] operator() ../src/nlsat/tactic/nlsat_tactic.cpp:154 ---------
+true
+!(y + x - opt > 0)
+!(opt - 2000 > 0)
+z^2 - 8 = 0
+y^2 + x^2 - 8 = 0
+assignment:
+---
+------------------------------------------------
+-------- [nlsat] search ../src/nlsat/nlsat_solver.cpp:1486 ---------
+starting search...
+true
+!(y + x - opt > 0)
+!(opt - 2000 > 0)
+z^2 - 8 = 0
+y^2 + x^2 - 8 = 0
+assignment:
+---
+
+var order:
+0 -> opt
+1 -> x
+2 -> y
+3 -> z
+------------------------------------------------
+-------- [nlsat] search ../src/nlsat/nlsat_solver.cpp:1490 ---------
+(declare-fun b0 () Bool)
+(declare-fun x0 () Real)
+(declare-fun x1 () Real)
+(declare-fun x2 () Real)
+(declare-fun x3 () Real)
+(assert (and true
+true
+(not (> (+ x2 x1 (* (- 1) x0)) 0))
+(not (> (+ x0 (- 2000)) 0))
+(= (+ (* x3 x3) (- 8)) 0)
+(= (+ (* x2 x2) (* x1 x1) (- 8)) 0)
+))
+
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: true <- true
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(opt - 2000 > 0) <- !(opt - 2000 > 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(2000, ~p2, oo)}
+assigning opt(x0) -> -2147483646
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {}
+assigning x(x1) -> 0.125
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 0
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+opt -> -2147483646
+x -> 0.125
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x > 0) or !(x^2 - 8 < 0) or !(opt + 4 < 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 0
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x > 0) <- decision
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(0, ~p5, oo)}
+assigning x(x1) -> -2147483646
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 1
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> false
+opt -> -2147483646
+x -> -2147483646
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x < 0) or !(x^2 - 8 > 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 1
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x < 0) <- decision
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p8, 0), (0, ~p5, oo)}
+assigning x(x1) -> 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 2
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> false
+b8 x < 0 -> false
+opt -> -2147483646
+x -> 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x = 0) or !(x^2 - 8 < 0) or !(opt + 4 < 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 2
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x = 0 <- x < 0 or x = 0 or x > 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x^2 - 8 < 0 <- x < 0 or x^2 - 8 < 0 or x > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2129 ---------
+new clause triggered another conflict, restarting conflict resolution...
+!(opt + 4 < 0) or !(x = 0) or !(x^2 - 8 < 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+!(opt + 4 < 0) or !(x = 0) or !(x^2 - 8 < 0)
+xk: x
+scope_lvl: 2
+current assignment
+b0 -> true
+b2 opt - 2000 > 0 -> false
+b5 x > 0 -> false
+b6 x^2 - 8 < 0 -> true
+b8 x < 0 -> false
+b10 x = 0 -> true
+opt -> -2147483646
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(opt + 4 < 0) or x > 0 or x < 0
+found_decision: 1
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2113 ---------
+backtracking to new level: 1, curr: 2
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x < 0 <- !(opt + 4 < 0) or x > 0 or x < 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 > 0) <- !(x < 0) or !(x^2 - 8 > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x = 0) <- x^2 - 8 > 0 or !(x < 0) or !(x = 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p9, -2.8284271247?), [0, p8, oo)}
+assigning x(x1) -> -2.8284271247?
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 1
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> false
+b8 x < 0 -> true
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+opt -> -2147483646
+x -> -2.8284271247?
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x^2 - 8 = 0) or !(opt + 4 < 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 1
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 = 0) <- !(opt + 4 < 0) or !(x^2 - 8 = 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p9, -2.8284271247?), [-2.8284271247?, ~p11, -2.8284271247?], [0, p8, oo)}
+assigning x(x1) -> -2.8283271247?
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 1
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> false
+b8 x < 0 -> true
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b11 x^2 - 8 = 0 -> false
+opt -> -2147483646
+x -> -2.8283271247?
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x < 0) or !(x^2 - 8 < 0) or !(opt + 4 < 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 1
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x^2 - 8 < 0 <- x^2 - 8 > 0 or x^2 - 8 = 0 or x^2 - 8 < 0 or !(x < 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2129 ---------
+new clause triggered another conflict, restarting conflict resolution...
+!(opt + 4 < 0) or !(x < 0) or !(x^2 - 8 < 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+!(opt + 4 < 0) or !(x < 0) or !(x^2 - 8 < 0)
+xk: x
+scope_lvl: 1
+current assignment
+b0 -> true
+b2 opt - 2000 > 0 -> false
+b5 x > 0 -> false
+b6 x^2 - 8 < 0 -> true
+b8 x < 0 -> true
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b11 x^2 - 8 = 0 -> false
+opt -> -2147483646
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(opt + 4 < 0) or x > 0
+found_decision: 1
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2113 ---------
+backtracking to new level: 0, curr: 1
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x > 0 <- !(opt + 4 < 0) or x > 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 < 0) <- !(opt + 4 < 0) or !(x > 0) or !(x^2 - 8 < 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x < 0) <- !(x > 0) or x^2 - 8 < 0 or !(x < 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 = 0) <- !(opt + 4 < 0) or !(x^2 - 8 = 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, p5, -2.8284271247?], (-2.8284271247?, ~p6, 2.8284271247?), [2.8284271247?, ~p11, 2.8284271247?]}
+assigning x(x1) -> 2147483646
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 0
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> true
+b6 x^2 - 8 < 0 -> false
+b8 x < 0 -> false
+b11 x^2 - 8 = 0 -> false
+opt -> -2147483646
+x -> 2147483646
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x > 0) or !(x^2 - 8 > 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 0
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x^2 - 8 > 0 <- !(x > 0) or x^2 - 8 < 0 or x^2 - 8 = 0 or x^2 - 8 > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2129 ---------
+new clause triggered another conflict, restarting conflict resolution...
+!(x > 0) or !(x^2 - 8 > 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+!(x > 0) or !(x^2 - 8 > 0)
+xk: x
+scope_lvl: 0
+current assignment
+b0 -> true
+b2 opt - 2000 > 0 -> false
+b5 x > 0 -> true
+b6 x^2 - 8 < 0 -> false
+b8 x < 0 -> false
+b9 x^2 - 8 > 0 -> true
+b11 x^2 - 8 = 0 -> false
+opt -> -2147483646
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(opt + 4 < 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 0
+new_stage: 0
+opt
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(opt + 4 < 0) <- !(opt + 4 < 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p7, -4), (2000, ~p2, oo)}
+assigning opt(x0) -> -4
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x < 0) <- decision
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x > 0) <- decision
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p8, 0), (0, ~p5, oo)}
+assigning x(x1) -> 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 2
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> false
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> false
+opt -> -4
+x -> 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(x = 0) or !(x^2 - 8 < 0) or !(opt + 4 = 0) or !(opt < 0) or !(opt^2 - 8 > 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 2
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: 2 x - opt > 0 <- x < 0 or 2 x - opt > 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x = 0 <- x < 0 or x = 0 or x > 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x^2 - 8 < 0 <- x < 0 or x^2 - 8 < 0 or x > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2129 ---------
+new clause triggered another conflict, restarting conflict resolution...
+!(opt < 0) or !(opt + 4 = 0) or !(opt^2 - 8 > 0) or !(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(x = 0) or !(x^2 - 8 < 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+!(opt < 0) or !(opt + 4 = 0) or !(opt^2 - 8 > 0) or !(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(x = 0) or !(x^2 - 8 < 0)
+xk: x
+scope_lvl: 2
+current assignment
+b0 -> true
+b2 opt - 2000 > 0 -> false
+b5 x > 0 -> false
+b6 x^2 - 8 < 0 -> true
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> false
+b10 x = 0 -> true
+b13 2 x - opt > 0 -> true
+opt -> -4
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(opt < 0) or !(opt + 4 = 0) or !(opt^2 - 8 > 0) or !(4 opt^2 - 64 = 0) or x < 0 or x > 0
+found_decision: 1
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2113 ---------
+backtracking to new level: 1, curr: 2
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x > 0 <- !(opt < 0) or !(opt + 4 = 0) or !(opt^2 - 8 > 0) or !(4 opt^2 - 64 = 0) or x > 0 or x < 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 > 0) <- !(x > 0) or !(x^2 - 8 > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: 2 x - opt > 0 <- !(x > 0) or 2 x - opt > 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x = 0) <- !(x > 0) or x^2 - 8 > 0 or !(x = 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, p5, 0], (2.8284271247?, ~p9, oo)}
+assigning x(x1) -> 0.0001
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 1
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> true
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> false
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b13 2 x - opt > 0 -> true
+opt -> -4
+x -> 0.0001
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(x > 0) or !(x^2 - 8 < 0) or !(opt + 4 = 0) or !(opt < 0) or !(opt^2 - 8 > 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 1
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 < 0) <- !(opt < 0) or !(opt + 4 = 0) or !(opt^2 - 8 > 0) or !(4 opt^2 - 64 = 0) or !(x > 0) or !(2 x - opt > 0) or !(x^2 - 8 < 0)
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, p5, -2.8284271247?], (-2.8284271247?, ~p6, 2.8284271247?), (2.8284271247?, ~p9, oo)}
+assigning x(x1) -> 2.8284271247?
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 1
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> true
+b6 x^2 - 8 < 0 -> false
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> false
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b13 2 x - opt > 0 -> true
+opt -> -4
+x -> 2.8284271247?
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x^2 - 8 = 0) or !(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(opt + 4 = 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 1
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x^2 - 8 = 0 <- !(x > 0) or x^2 - 8 < 0 or x^2 - 8 = 0 or x^2 - 8 > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2129 ---------
+new clause triggered another conflict, restarting conflict resolution...
+!(opt + 4 = 0) or !(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(x^2 - 8 = 0)
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+!(opt + 4 = 0) or !(4 opt^2 - 64 = 0) or !(2 x - opt > 0) or !(x^2 - 8 = 0)
+xk: x
+scope_lvl: 1
+current assignment
+b0 -> true
+b2 opt - 2000 > 0 -> false
+b5 x > 0 -> true
+b6 x^2 - 8 < 0 -> false
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> false
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b11 x^2 - 8 = 0 -> true
+b13 2 x - opt > 0 -> true
+opt -> -4
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(opt + 4 = 0) or !(4 opt^2 - 64 = 0) or !(opt < 0) or !(opt^2 - 8 > 0) or x < 0
+found_decision: 1
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2113 ---------
+backtracking to new level: 0, curr: 1
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: x < 0 <- !(opt < 0) or !(opt + 4 = 0) or !(opt^2 - 8 > 0) or !(4 opt^2 - 64 = 0) or x < 0
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x^2 - 8 > 0) <- !(x < 0) or !(x^2 - 8 > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x = 0) <- x^2 - 8 > 0 or !(x < 0) or !(x = 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(x > 0) <- x^2 - 8 > 0 or !(x < 0) or !(x > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(2 x - opt > 0) <- decision
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p9, -2.8284271247?), (-2, ~p13, oo)}
+assigning x(x1) -> -2.8284271247?
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y^2 + x^2 - 8 = 0) <- !(y^2 + x^2 - 8 = 0) or y + x - opt > 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:1984 ---------
+resolve, conflicting clause:
+y^2 + x^2 - 8 = 0
+xk: y
+scope_lvl: 1
+current assignment
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b4 y^2 + x^2 - 8 = 0 -> false
+b5 x > 0 -> false
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> true
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b13 2 x - opt > 0 -> false
+opt -> -4
+x -> -2.8284271247?
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2067 ---------
+new lemma:
+!(x^2 - 8 = 0) or !(4 opt^2 - 64 = 0) or !(2 x - opt < 0) or !(opt + 4 = 0)
+found_decision: 0
+------------------------------------------------
+-------- [nlsat] resolve ../src/nlsat/nlsat_solver.cpp:2098 ---------
+new_level: 1
+new_stage: 1
+x
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(2 x - opt < 0) <- decision
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, ~p17, -2), (-2, ~p13, oo)}
+assigning x(x1) -> -2
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: !(y + x - opt > 0) <- !(y + x - opt > 0)
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: y^2 + x^2 - 8 = 0 <- y^2 + x^2 - 8 = 0
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, p4, -2), (-2, ~p1, oo)}
+assigning y(x2) -> -2
+------------------------------------------------
+-------- [nlsat] assign ../src/nlsat/nlsat_solver.cpp:1139 ---------
+assigning literal: z^2 - 8 = 0 <- z^2 - 8 = 0
+------------------------------------------------
+-------- [nlsat] select_witness ../src/nlsat/nlsat_solver.cpp:1460 ---------
+infeasible intervals: {(-oo, p3, -2.8284271247?), (-2.8284271247?, p3, 2.8284271247?), (2.8284271247?, p3, oo)}
+assigning z(x3) -> -2.8284271247?
+------------------------------------------------
+-------- [nlsat] is_satisfied ../src/nlsat/nlsat_solver.cpp:1471 ---------
+found model
+b0 -> true
+b1 y + x - opt > 0 -> false
+b2 opt - 2000 > 0 -> false
+b3 z^2 - 8 = 0 -> true
+b4 y^2 + x^2 - 8 = 0 -> true
+b5 x > 0 -> false
+b7 opt + 4 < 0 -> false
+b8 x < 0 -> true
+b9 x^2 - 8 > 0 -> false
+b10 x = 0 -> false
+b13 2 x - opt > 0 -> false
+b17 2 x - opt < 0 -> false
+opt -> -4
+x -> -2
+y -> -2
+z -> -2.8284271247?
+------------------------------------------------

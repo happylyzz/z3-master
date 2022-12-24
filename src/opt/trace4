@@ -1,0 +1,1792 @@
+-------- [opt] to_fmls ../src/opt/opt_context.cpp:1298 ---------
+
+(= (* a a) 2.0)
+(= (* b b) 3.0)
+(< b a)
+(minimize!!0 a)
+------------------------------------------------
+-------- [opt] simplify_fmls ../src/opt/opt_context.cpp:891 ---------
+(goal
+  (= (* a a) 2.0)
+  (= (* b b) 3.0)
+  (< b a)
+  (minimize!!0 a))
+------------------------------------------------
+-------- [opt] from_fmls ../src/opt/opt_context.cpp:1092 ---------
+
+(= (* a a) 2.0)
+(= (* b b) 3.0)
+(not (<= a b))
+(minimize!!0 a)
+------------------------------------------------
+-------- [opt] optimize ../src/opt/opt_context.cpp:324 ---------
+initial search result: l_true
+(declare-fun a () Real)
+(declare-fun b () Real)
+(assert (= (* a a) 2.0))
+(assert (= (* b b) 3.0))
+(assert (not (<= (+ a (* (- 1.0) b)) 0.0)))
+------------------------------------------------
+-------- [opt] optimize ../src/opt/opt_context.cpp:342 ---------
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] add_objective ../src/smt/theory_lra.cpp:3554 ---------
+(* (- 1.0) a)
+------------------------------------------------
+-------- [opt] add_objective ../src/opt/opt_solver.cpp:403 ---------
+16 (* (- 1.0) a)
+------------------------------------------------
+-------- [opt] update_bound ../src/opt/opt_context.cpp:1335 ---------
+a (root-obj (+ (^ x 2) (- 2)) 2)
+------------------------------------------------
+-------- [opt] lex ../src/opt/optsmt.cpp:501 ---------
+optsmt:lex
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:196 ---------
+index: 0 is-max: 0
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: null
+lower: -oo
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-49434709829/25146945330, 0) -49434709829/25146945330 (> (* (- 1.0) a) (- (/ 49434709829.0 25146945330.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -49434709829/25146945330 (> (* (- 1.0) a) (- (/ 49434709829.0 25146945330.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -49434709829/25146945330
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -49434709829/25146945330
+new condition: (> (* (- 1.0) a) (- (/ 49434709829.0 25146945330.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -49434709829/25146945330
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-49434709829/25146945330 lower: -oo
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 49434709829.0 25146945330.0)))
+lower: -49434709829/25146945330
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-84997860959/50293890660, 0) -84997860959/50293890660 (> (* (- 1.0) a) (- (/ 84997860959.0 50293890660.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -84997860959/50293890660 (> (* (- 1.0) a) (- (/ 84997860959.0 50293890660.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -84997860959/50293890660
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -84997860959/50293890660
+new condition: (> (* (- 1.0) a) (- (/ 84997860959.0 50293890660.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -84997860959/50293890660
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-84997860959/50293890660 lower: -49434709829/25146945330
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 84997860959.0 50293890660.0)))
+lower: -84997860959/50293890660
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-156124163219/100587781320, 0) -156124163219/100587781320 (> (* (- 1.0) a) (- (/ 156124163219.0 100587781320.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -156124163219/100587781320 (> (* (- 1.0) a) (- (/ 156124163219.0 100587781320.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -156124163219/100587781320
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -156124163219/100587781320
+new condition: (> (* (- 1.0) a) (- (/ 156124163219.0 100587781320.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -156124163219/100587781320
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-156124163219/100587781320 lower: -84997860959/50293890660
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 156124163219.0 100587781320.0)))
+lower: -156124163219/100587781320
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-298376767739/201175562640, 0) -298376767739/201175562640 (> (* (- 1.0) a) (- (/ 298376767739.0 201175562640.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -298376767739/201175562640 (> (* (- 1.0) a) (- (/ 298376767739.0 201175562640.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -298376767739/201175562640
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -298376767739/201175562640
+new condition: (> (* (- 1.0) a) (- (/ 298376767739.0 201175562640.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -298376767739/201175562640
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-298376767739/201175562640 lower: -156124163219/100587781320
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 298376767739.0 201175562640.0)))
+lower: -298376767739/201175562640
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-582881976779/402351125280, 0) -582881976779/402351125280 (> (* (- 1.0) a) (- (/ 582881976779.0 402351125280.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -582881976779/402351125280 (> (* (- 1.0) a) (- (/ 582881976779.0 402351125280.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -582881976779/402351125280
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -582881976779/402351125280
+new condition: (> (* (- 1.0) a) (- (/ 582881976779.0 402351125280.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -582881976779/402351125280
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-582881976779/402351125280 lower: -298376767739/201175562640
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 582881976779.0 402351125280.0)))
+lower: -582881976779/402351125280
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-1151892394859/804702250560, 0) -1151892394859/804702250560 (> (* (- 1.0) a) (- (/ 1151892394859.0 804702250560.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -1151892394859/804702250560 (> (* (- 1.0) a) (- (/ 1151892394859.0 804702250560.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -1151892394859/804702250560
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -1151892394859/804702250560
+new condition: (> (* (- 1.0) a) (- (/ 1151892394859.0 804702250560.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -1151892394859/804702250560
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-1151892394859/804702250560 lower: -582881976779/402351125280
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 1151892394859.0 804702250560.0)))
+lower: -1151892394859/804702250560
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-2289913231019/1609404501120, 0) -2289913231019/1609404501120 (> (* (- 1.0) a) (- (/ 2289913231019.0 1609404501120.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -2289913231019/1609404501120 (> (* (- 1.0) a) (- (/ 2289913231019.0 1609404501120.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -2289913231019/1609404501120
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -2289913231019/1609404501120
+new condition: (> (* (- 1.0) a) (- (/ 2289913231019.0 1609404501120.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -2289913231019/1609404501120
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-2289913231019/1609404501120 lower: -1151892394859/804702250560
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 2289913231019.0 1609404501120.0)))
+lower: -2289913231019/1609404501120
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-4565954903339/3218809002240, 0) -4565954903339/3218809002240 (> (* (- 1.0) a) (- (/ 4565954903339.0 3218809002240.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -4565954903339/3218809002240 (> (* (- 1.0) a) (- (/ 4565954903339.0 3218809002240.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -4565954903339/3218809002240
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -4565954903339/3218809002240
+new condition: (> (* (- 1.0) a) (- (/ 4565954903339.0 3218809002240.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -4565954903339/3218809002240
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-4565954903339/3218809002240 lower: -2289913231019/1609404501120
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 4565954903339.0 3218809002240.0)))
+lower: -4565954903339/3218809002240
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-9118038247979/6437618004480, 0) -9118038247979/6437618004480 (> (* (- 1.0) a) (- (/ 9118038247979.0 6437618004480.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -9118038247979/6437618004480 (> (* (- 1.0) a) (- (/ 9118038247979.0 6437618004480.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -9118038247979/6437618004480
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -9118038247979/6437618004480
+new condition: (> (* (- 1.0) a) (- (/ 9118038247979.0 6437618004480.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -9118038247979/6437618004480
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-9118038247979/6437618004480 lower: -4565954903339/3218809002240
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 9118038247979.0 6437618004480.0)))
+lower: -9118038247979/6437618004480
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-18222204937259/12875236008960, 0) -18222204937259/12875236008960 (> (* (- 1.0) a) (- (/ 18222204937259.0 12875236008960.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -18222204937259/12875236008960 (> (* (- 1.0) a) (- (/ 18222204937259.0 12875236008960.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -18222204937259/12875236008960
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -18222204937259/12875236008960
+new condition: (> (* (- 1.0) a) (- (/ 18222204937259.0 12875236008960.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -18222204937259/12875236008960
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-18222204937259/12875236008960 lower: -9118038247979/6437618004480
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 18222204937259.0 12875236008960.0)))
+lower: -18222204937259/12875236008960
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-36430538315819/25750472017920, 0) -36430538315819/25750472017920 (> (* (- 1.0) a) (- (/ 36430538315819.0 25750472017920.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -36430538315819/25750472017920 (> (* (- 1.0) a) (- (/ 36430538315819.0 25750472017920.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -36430538315819/25750472017920
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -36430538315819/25750472017920
+new condition: (> (* (- 1.0) a) (- (/ 36430538315819.0 25750472017920.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -36430538315819/25750472017920
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-36430538315819/25750472017920 lower: -18222204937259/12875236008960
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 36430538315819.0 25750472017920.0)))
+lower: -36430538315819/25750472017920
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-72847205072939/51500944035840, 0) -72847205072939/51500944035840 (> (* (- 1.0) a) (- (/ 72847205072939.0 51500944035840.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -72847205072939/51500944035840 (> (* (- 1.0) a) (- (/ 72847205072939.0 51500944035840.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -72847205072939/51500944035840
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -72847205072939/51500944035840
+new condition: (> (* (- 1.0) a) (- (/ 72847205072939.0 51500944035840.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -72847205072939/51500944035840
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-72847205072939/51500944035840 lower: -36430538315819/25750472017920
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 72847205072939.0 51500944035840.0)))
+lower: -72847205072939/51500944035840
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-145680538587179/103001888071680, 0) -145680538587179/103001888071680 (> (* (- 1.0) a) (- (/ 145680538587179.0 103001888071680.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -145680538587179/103001888071680 (> (* (- 1.0) a) (- (/ 145680538587179.0 103001888071680.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -145680538587179/103001888071680
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -145680538587179/103001888071680
+new condition: (> (* (- 1.0) a) (- (/ 145680538587179.0 103001888071680.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -145680538587179/103001888071680
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-145680538587179/103001888071680 lower: -72847205072939/51500944035840
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 145680538587179.0 103001888071680.0)))
+lower: -145680538587179/103001888071680
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-291347205615659/206003776143360, 0) -291347205615659/206003776143360 (> (* (- 1.0) a) (- (/ 291347205615659.0 206003776143360.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -291347205615659/206003776143360 (> (* (- 1.0) a) (- (/ 291347205615659.0 206003776143360.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -291347205615659/206003776143360
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -291347205615659/206003776143360
+new condition: (> (* (- 1.0) a) (- (/ 291347205615659.0 206003776143360.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -291347205615659/206003776143360
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-291347205615659/206003776143360 lower: -145680538587179/103001888071680
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 291347205615659.0 206003776143360.0)))
+lower: -291347205615659/206003776143360
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-582680539672619/412007552286720, 0) -582680539672619/412007552286720 (> (* (- 1.0) a) (- (/ 582680539672619.0 412007552286720.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -582680539672619/412007552286720 (> (* (- 1.0) a) (- (/ 582680539672619.0 412007552286720.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -582680539672619/412007552286720
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -582680539672619/412007552286720
+new condition: (> (* (- 1.0) a) (- (/ 582680539672619.0 412007552286720.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -582680539672619/412007552286720
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-582680539672619/412007552286720 lower: -291347205615659/206003776143360
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 582680539672619.0 412007552286720.0)))
+lower: -582680539672619/412007552286720
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-1165347207786539/824015104573440, 0) -1165347207786539/824015104573440 (> (* (- 1.0) a) (- (/ 1165347207786539.0 824015104573440.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -1165347207786539/824015104573440 (> (* (- 1.0) a) (- (/ 1165347207786539.0 824015104573440.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -1165347207786539/824015104573440
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -1165347207786539/824015104573440
+new condition: (> (* (- 1.0) a) (- (/ 1165347207786539.0 824015104573440.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -1165347207786539/824015104573440
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-1165347207786539/824015104573440 lower: -582680539672619/412007552286720
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 1165347207786539.0 824015104573440.0)))
+lower: -1165347207786539/824015104573440
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-2330680544014379/1648030209146880, 0) -2330680544014379/1648030209146880 (> (* (- 1.0) a) (- (/ 2330680544014379.0 1648030209146880.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -2330680544014379/1648030209146880 (> (* (- 1.0) a) (- (/ 2330680544014379.0 1648030209146880.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -2330680544014379/1648030209146880
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -2330680544014379/1648030209146880
+new condition: (> (* (- 1.0) a) (- (/ 2330680544014379.0 1648030209146880.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -2330680544014379/1648030209146880
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-2330680544014379/1648030209146880 lower: -1165347207786539/824015104573440
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 2330680544014379.0 1648030209146880.0)))
+lower: -2330680544014379/1648030209146880
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-4661347216470059/3296060418293760, 0) -4661347216470059/3296060418293760 (> (* (- 1.0) a) (- (/ 4661347216470059.0 3296060418293760.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -4661347216470059/3296060418293760 (> (* (- 1.0) a) (- (/ 4661347216470059.0 3296060418293760.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -4661347216470059/3296060418293760
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -4661347216470059/3296060418293760
+new condition: (> (* (- 1.0) a) (- (/ 4661347216470059.0 3296060418293760.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -4661347216470059/3296060418293760
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-4661347216470059/3296060418293760 lower: -2330680544014379/1648030209146880
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 4661347216470059.0 3296060418293760.0)))
+lower: -4661347216470059/3296060418293760
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-9322680561381419/6592120836587520, 0) -9322680561381419/6592120836587520 (> (* (- 1.0) a) (- (/ 9322680561381419.0 6592120836587520.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -9322680561381419/6592120836587520 (> (* (- 1.0) a) (- (/ 9322680561381419.0 6592120836587520.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -9322680561381419/6592120836587520
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -9322680561381419/6592120836587520
+new condition: (> (* (- 1.0) a) (- (/ 9322680561381419.0 6592120836587520.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -9322680561381419/6592120836587520
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-9322680561381419/6592120836587520 lower: -4661347216470059/3296060418293760
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 9322680561381419.0 6592120836587520.0)))
+lower: -9322680561381419/6592120836587520
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-18645347251204139/13184241673175040, 0) -18645347251204139/13184241673175040 (> (* (- 1.0) a) (- (/ 18645347251204139.0 13184241673175040.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -18645347251204139/13184241673175040 (> (* (- 1.0) a) (- (/ 18645347251204139.0 13184241673175040.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -18645347251204139/13184241673175040
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -18645347251204139/13184241673175040
+new condition: (> (* (- 1.0) a) (- (/ 18645347251204139.0 13184241673175040.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -18645347251204139/13184241673175040
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-18645347251204139/13184241673175040 lower: -9322680561381419/6592120836587520
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 18645347251204139.0 13184241673175040.0)))
+lower: -18645347251204139/13184241673175040
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-37290680630849579/26368483346350080, 0) -37290680630849579/26368483346350080 (> (* (- 1.0) a) (- (/ 37290680630849579.0 26368483346350080.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -37290680630849579/26368483346350080 (> (* (- 1.0) a) (- (/ 37290680630849579.0 26368483346350080.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -37290680630849579/26368483346350080
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -37290680630849579/26368483346350080
+new condition: (> (* (- 1.0) a) (- (/ 37290680630849579.0 26368483346350080.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -37290680630849579/26368483346350080
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-37290680630849579/26368483346350080 lower: -18645347251204139/13184241673175040
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 37290680630849579.0 26368483346350080.0)))
+lower: -37290680630849579/26368483346350080
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-74581347390140459/52736966692700160, 0) -74581347390140459/52736966692700160 (> (* (- 1.0) a) (- (/ 74581347390140459.0 52736966692700160.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -74581347390140459/52736966692700160 (> (* (- 1.0) a) (- (/ 74581347390140459.0 52736966692700160.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -74581347390140459/52736966692700160
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -74581347390140459/52736966692700160
+new condition: (> (* (- 1.0) a) (- (/ 74581347390140459.0 52736966692700160.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -74581347390140459/52736966692700160
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-74581347390140459/52736966692700160 lower: -37290680630849579/26368483346350080
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 74581347390140459.0 52736966692700160.0)))
+lower: -74581347390140459/52736966692700160
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-149162680908722219/105473933385400320, 0) -149162680908722219/105473933385400320 (> (* (- 1.0) a) (- (/ 149162680908722219.0 105473933385400320.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -149162680908722219/105473933385400320 (> (* (- 1.0) a) (- (/ 149162680908722219.0 105473933385400320.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -149162680908722219/105473933385400320
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -149162680908722219/105473933385400320
+new condition: (> (* (- 1.0) a) (- (/ 149162680908722219.0 105473933385400320.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -149162680908722219/105473933385400320
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-149162680908722219/105473933385400320 lower: -74581347390140459/52736966692700160
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 149162680908722219.0 105473933385400320.0)))
+lower: -149162680908722219/105473933385400320
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-298325347945885739/210947866770800640, 0) -298325347945885739/210947866770800640 (> (* (- 1.0) a) (- (/ 298325347945885739.0 210947866770800640.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -298325347945885739/210947866770800640 (> (* (- 1.0) a) (- (/ 298325347945885739.0 210947866770800640.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -298325347945885739/210947866770800640
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -298325347945885739/210947866770800640
+new condition: (> (* (- 1.0) a) (- (/ 298325347945885739.0 210947866770800640.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -298325347945885739/210947866770800640
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-298325347945885739/210947866770800640 lower: -149162680908722219/105473933385400320
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 298325347945885739.0 210947866770800640.0)))
+lower: -298325347945885739/210947866770800640
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-596650682020212779/421895733541601280, 0) -596650682020212779/421895733541601280 (> (* (- 1.0) a) (- (/ 596650682020212779.0 421895733541601280.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -596650682020212779/421895733541601280 (> (* (- 1.0) a) (- (/ 596650682020212779.0 421895733541601280.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -596650682020212779/421895733541601280
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -596650682020212779/421895733541601280
+new condition: (> (* (- 1.0) a) (- (/ 596650682020212779.0 421895733541601280.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -596650682020212779/421895733541601280
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-596650682020212779/421895733541601280 lower: -298325347945885739/210947866770800640
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 596650682020212779.0 421895733541601280.0)))
+lower: -596650682020212779/421895733541601280
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-1193301350168866859/843791467083202560, 0) -1193301350168866859/843791467083202560 (> (* (- 1.0) a) (- (/ 1193301350168866859.0 843791467083202560.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -1193301350168866859/843791467083202560 (> (* (- 1.0) a) (- (/ 1193301350168866859.0 843791467083202560.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -1193301350168866859/843791467083202560
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -1193301350168866859/843791467083202560
+new condition: (> (* (- 1.0) a) (- (/ 1193301350168866859.0 843791467083202560.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -1193301350168866859/843791467083202560
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-1193301350168866859/843791467083202560 lower: -596650682020212779/421895733541601280
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 1193301350168866859.0 843791467083202560.0)))
+lower: -1193301350168866859/843791467083202560
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-2386602686466175019/1687582934166405120, 0) -2386602686466175019/1687582934166405120 (> (* (- 1.0) a) (- (/ 2386602686466175019.0 1687582934166405120.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -2386602686466175019/1687582934166405120 (> (* (- 1.0) a) (- (/ 2386602686466175019.0 1687582934166405120.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -2386602686466175019/1687582934166405120
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -2386602686466175019/1687582934166405120
+new condition: (> (* (- 1.0) a) (- (/ 2386602686466175019.0 1687582934166405120.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -2386602686466175019/1687582934166405120
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-2386602686466175019/1687582934166405120 lower: -1193301350168866859/843791467083202560
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 2386602686466175019.0 1687582934166405120.0)))
+lower: -2386602686466175019/1687582934166405120
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-4773205359060791339/3375165868332810240, 0) -4773205359060791339/3375165868332810240 (> (* (- 1.0) a) (- (/ 4773205359060791339.0 3375165868332810240.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -4773205359060791339/3375165868332810240 (> (* (- 1.0) a) (- (/ 4773205359060791339.0 3375165868332810240.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -4773205359060791339/3375165868332810240
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -4773205359060791339/3375165868332810240
+new condition: (> (* (- 1.0) a) (- (/ 4773205359060791339.0 3375165868332810240.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -4773205359060791339/3375165868332810240
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-4773205359060791339/3375165868332810240 lower: -2386602686466175019/1687582934166405120
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 4773205359060791339.0 3375165868332810240.0)))
+lower: -4773205359060791339/3375165868332810240
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-9546410704250023979/6750331736665620480, 0) -9546410704250023979/6750331736665620480 (> (* (- 1.0) a) (- (/ 9546410704250023979.0 6750331736665620480.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -9546410704250023979/6750331736665620480 (> (* (- 1.0) a) (- (/ 9546410704250023979.0 6750331736665620480.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -9546410704250023979/6750331736665620480
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -9546410704250023979/6750331736665620480
+new condition: (> (* (- 1.0) a) (- (/ 9546410704250023979.0 6750331736665620480.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -9546410704250023979/6750331736665620480
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-9546410704250023979/6750331736665620480 lower: -4773205359060791339/3375165868332810240
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 9546410704250023979.0 6750331736665620480.0)))
+lower: -9546410704250023979/6750331736665620480
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-19092821394628489259/13500663473331240960, 0) -19092821394628489259/13500663473331240960 (> (* (- 1.0) a) (- (/ 19092821394628489259.0 13500663473331240960.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -19092821394628489259/13500663473331240960 (> (* (- 1.0) a) (- (/ 19092821394628489259.0 13500663473331240960.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -19092821394628489259/13500663473331240960
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -19092821394628489259/13500663473331240960
+new condition: (> (* (- 1.0) a) (- (/ 19092821394628489259.0 13500663473331240960.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -19092821394628489259/13500663473331240960
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-19092821394628489259/13500663473331240960 lower: -9546410704250023979/6750331736665620480
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 19092821394628489259.0 13500663473331240960.0)))
+lower: -19092821394628489259/13500663473331240960
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-38185642775385419819/27001326946662481920, 0) -38185642775385419819/27001326946662481920 (> (* (- 1.0) a) (- (/ 38185642775385419819.0 27001326946662481920.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -38185642775385419819/27001326946662481920 (> (* (- 1.0) a) (- (/ 38185642775385419819.0 27001326946662481920.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -38185642775385419819/27001326946662481920
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -38185642775385419819/27001326946662481920
+new condition: (> (* (- 1.0) a) (- (/ 38185642775385419819.0 27001326946662481920.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -38185642775385419819/27001326946662481920
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-38185642775385419819/27001326946662481920 lower: -19092821394628489259/13500663473331240960
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 38185642775385419819.0 27001326946662481920.0)))
+lower: -38185642775385419819/27001326946662481920
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (-76371285536899280939/54002653893324963840, 0) -76371285536899280939/54002653893324963840 (> (* (- 1.0) a) (- (/ 76371285536899280939.0 54002653893324963840.0)))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared -76371285536899280939/54002653893324963840 (> (* (- 1.0) a) (- (/ 76371285536899280939.0 54002653893324963840.0)))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 -76371285536899280939/54002653893324963840
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: -76371285536899280939/54002653893324963840
+new condition: (> (* (- 1.0) a) (- (/ 76371285536899280939.0 54002653893324963840.0)))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: -76371285536899280939/54002653893324963840
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+-76371285536899280939/54002653893324963840 lower: -38185642775385419819/27001326946662481920
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (- (/ 76371285536899280939.0 54002653893324963840.0)))
+lower: -76371285536899280939/54002653893324963840
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (11111062713/12829949216, 0) 11111062713/12829949216 (> (* (- 1.0) a) (/ 11111062713.0 12829949216.0))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared 11111062713/12829949216 (> (* (- 1.0) a) (/ 11111062713.0 12829949216.0))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 11111062713/12829949216
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:316 ---------
+objective:     (* (- 1.0) a)
+maximal value: 11111062713/12829949216
+new condition: (> (* (- 1.0) a) (/ 11111062713.0 12829949216.0))
+update model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+last model:
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: 11111062713/12829949216
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+11111062713/12829949216 lower: -76371285536899280939/54002653893324963840
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_true
+last bound: (> (* (- 1.0) a) (/ 11111062713.0 12829949216.0))
+lower: 11111062713/12829949216
+upper: oo
+------------------------------------------------
+-------- [opt] mk_gt ../src/smt/theory_lra.cpp:3549 ---------
+v16 (11111062713/6414974608, 0) 11111062713/6414974608 (> (* (- 1.0) a) (/ 11111062713.0 6414974608.0))
+------------------------------------------------
+-------- [opt] maximize_objective ../src/opt/opt_solver.cpp:258 ---------
+has shared 11111062713/6414974608 (> (* (- 1.0) a) (/ 11111062713.0 6414974608.0))
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+
+------------------------------------------------
+-------- [opt] update_model ../src/smt/smt_context.cpp:4568 ---------
+refinalize done
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 11111062713/6414974608
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:228 ---------
+saved objective: 11111062713/6414974608
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:362 ---------
+11111062713/6414974608 lower: 11111062713/12829949216
+------------------------------------------------
+-------- [opt] update_lower_lex ../src/opt/optsmt.cpp:374 ---------
+update best model (define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:222 ---------
+check l_false
+last bound: (> (* (- 1.0) a) (/ 11111062713.0 6414974608.0))
+lower: 11111062713/6414974608
+upper: oo
+------------------------------------------------
+-------- [opt] geometric_lex ../src/opt/optsmt.cpp:267 ---------
+l_false 0
+------------------------------------------------
+-------- [opt] get_model ../src/opt/optsmt.cpp:546 ---------
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 3)) 1))
+(define-fun a () Real
+  (root-obj (+ (^ x 2) (- 2)) 1))
+
+------------------------------------------------
+-------- [opt] commit_assignment ../src/opt/optsmt.cpp:554 ---------
+set lower bound of (* (- 1.0) a) to: 11111062713/6414974608
+11111062713/6414974608:11111062713/6414974608
+------------------------------------------------
+-------- [opt] mk_ge ../src/opt/opt_solver.cpp:434 ---------
+v0 11111062713/6414974608
+------------------------------------------------

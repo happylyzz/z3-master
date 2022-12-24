@@ -1,0 +1,1849 @@
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+1 internalized: 0
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:259 ---------
+add 1, var = 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+1.0 internalized: 0
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:259 ---------
+add 1.0, var = 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+0 internalized: 0
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:259 ---------
+add 0, var = 2
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+0.0 internalized: 0
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:259 ---------
+add 0.0, var = 3
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(>= (mod (+ x y z) 36) 4)
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: z
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: z
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: x
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: x
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: y
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: y
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ x y z) v7
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: (+ x y z)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+36 internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+36 v8
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: 36
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(mod (+ x y z) 36) v9
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v9 0 += 1
+------------------------------------------------
+-------- [arith] mk_idiv_mod_axioms ../src/smt/theory_lra.cpp:1202 ---------
+(+ x y z) 36
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+36 internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* 36 (div (+ x y z) 36)) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (* 36 (div #26 36)) (mod (+ x y z) 36)) v11
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (<= (+ (+ x y z) (* (- 1) a!1)) 0))
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+36 internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* 36 (div (+ x y z) 36)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(- 1) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (* (- 1) a!1)) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (+ (+ x y z) (* (- 1) a!1))) internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (+ x y z) (* -1 (+ #48 #28))) v12
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v12 0 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (>= (+ (+ x y z) (* (- 1) a!1)) 0))
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+36 internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* 36 (div (+ x y z) 36)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(- 1) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (* (- 1) a!1)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (+ (+ x y z) (* (- 1) a!1))) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (+ x y z) (* -1 (+ #48 #28))) v12
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v12 1 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(>= (mod (+ x y z) 36) 0)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(mod (+ x y z) 36) v9
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v9 1 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(<= (mod (+ x y z) 36) 35)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(mod (+ x y z) 36) v9
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v9 2 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(<= (mod (+ x y z) 42) 20)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+42 internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+42 v13
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: 42
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(mod (+ x y z) 42) v14
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v14 0 += 1
+------------------------------------------------
+-------- [arith] mk_idiv_mod_axioms ../src/smt/theory_lra.cpp:1202 ---------
+(+ x y z) 42
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+42 internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* 42 (div (+ x y z) 42)) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42)) internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (* 42 (div #26 42)) (mod (+ x y z) 42)) v16
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1037 ---------
+sort constraint: (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (<= (+ (+ x y z) (* (- 1) a!1)) 0))
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+42 internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* 42 (div (+ x y z) 42)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(- 1) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (* (- 1) a!1)) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (+ (+ x y z) (* (- 1) a!1))) internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (+ x y z) (* -1 (+ #59 #32))) v17
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v17 0 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (>= (+ (+ x y z) (* (- 1) a!1)) 0))
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+42 internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* 42 (div (+ x y z) 42)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(- 1) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (* (- 1) a!1)) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (+ (+ x y z) (* (- 1) a!1))) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (+ x y z) (* -1 (+ #59 #32))) v17
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v17 1 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(>= (mod (+ x y z) 42) 0)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(mod (+ x y z) 42) v14
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v14 1 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(<= (mod (+ x y z) 42) 41)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(mod (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(mod (+ x y z) 42) v14
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v14 2 += 1
+------------------------------------------------
+-------- [arith] internalize_atom ../src/smt/theory_lra.cpp:918 ---------
+(>= z 10)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+z v4
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v4 0 += 1
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(>= (mod (+ x y z) 36) 4) 1
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(>= (mod (+ x y z) 36) 0) 5
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(<= (mod (+ x y z) 36) 35) 6
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(<= (mod (+ x y z) 42) 20) 7
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(>= (mod (+ x y z) 42) 0) 11
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(<= (mod (+ x y z) 42) 41) 12
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(>= z 10) 13
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (>= (+ (+ x y z) (* (- 1) a!1)) 0)) 4
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (<= (+ (+ x y z) (* (- 1) a!1)) 0)) 3
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (>= (+ (+ x y z) (* (- 1) a!1)) 0)) 10
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:992 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (<= (+ (+ x y z) (* (- 1) a!1)) 0)) 9
+------------------------------------------------
+-------- [arith] new_eq_eh ../src/smt/theory_lra.cpp:1020 ---------
+eq 11 == 7
+------------------------------------------------
+-------- [arith] new_eq_eh ../src/smt/theory_lra.cpp:1020 ---------
+eq 7 == 16
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2503 ---------
+flush bound axioms
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2519 ---------
+41  >= v14
+20  >= v14
+0  <= v14
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(>= (mod (+ x y z) 42) 0)
+(<= (mod (+ x y z) 42) 20)
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(not (<= (mod (+ x y z) 42) 20))
+(<= (mod (+ x y z) 42) 41)
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2519 ---------
+0  >= v17
+0  <= v17
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(<= (+ (+ x y z) (* -1 #60)) 0)
+(>= (+ (+ x y z) (* -1 #60)) 0)
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2519 ---------
+35  >= v9
+4  <= v9
+0  <= v9
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(>= (mod (+ x y z) 36) 0)
+(not (>= (mod (+ x y z) 36) 4))
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(>= (mod (+ x y z) 36) 0)
+(<= (mod (+ x y z) 36) 35)
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(>= (mod (+ x y z) 36) 4)
+(<= (mod (+ x y z) 36) 35)
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2519 ---------
+0  >= v12
+0  <= v12
+------------------------------------------------
+-------- [arith] mk_clause ../src/smt/theory_lra.cpp:566 ---------
+(<= (+ (+ x y z) (* -1 #49)) 0)
+(>= (+ (+ x y z) (* -1 #49)) 0)
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 1
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+4  <= v9
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 5
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+0  <= v9
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 6
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+35  >= v9
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 7
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+20  >= v14
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 11
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+0  <= v14
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 12
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+41  >= v14
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 13
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+10  <= v4
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 4
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+0  <= v12
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 3
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+0  >= v12
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 10
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+0  <= v17
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2131 ---------
+propagate: 9
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2873 ---------
+0  >= v17
+------------------------------------------------
+-------- [arith] final_check_eh ../src/smt/theory_lra.cpp:1568 ---------
+Theory arithmetic:
+number of constraints = 34
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+irr: v0 j0, int := 39: 1
+irr: v1 j1 := 41: 1.0
+v2 j2, int := 45: 0
+irr: v3 j3 := 46: 0.0
+v4 j4, int := 25: z
+v5 j5, int := 23: x
+v6 j6, int := 24: y
+v7 t7, int := 26: (+ x y z)
+v8 j8, int := 27: 36
+v9 j9, int := 28: (mod (+ x y z) 36)
+v10 j10, int := 47: (div (+ x y z) 36)
+v11 t11, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13, int := 31: 42
+v14 j14, int := 32: (mod (+ x y z) 42)
+v15 j15, int := 58: (div (+ x y z) 42)
+v16 t16, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+------------------------------------------------
+-------- [arith] check_lia ../src/smt/theory_lra.cpp:1899 ---------
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(div (+ x y z) 36) v10
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ x y z) v7
+------------------------------------------------
+-------- [arith] check_idiv_bounds ../src/smt/theory_lra.cpp:1753 ---------
+unbounded (div (+ x y z) 36)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(div (+ x y z) 42) v15
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ x y z) v7
+------------------------------------------------
+-------- [arith] check_idiv_bounds ../src/smt/theory_lra.cpp:1753 ---------
+unbounded (div (+ x y z) 42)
+------------------------------------------------
+-------- [arith] check_nla ../src/smt/theory_lra.cpp:2047 ---------
+no nla
+------------------------------------------------
+-------- [arith] assume_eqs ../src/smt/theory_lra.cpp:1486 ---------
+Theory arithmetic:
+number of constraints = 34
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+irr: v0 j0, int := 39: 1
+irr: v1 j1 := 41: 1.0
+v2 j2, int := 45: 0
+irr: v3 j3 := 46: 0.0
+v4 j4, int := 25: z
+v5 j5, int := 23: x
+v6 j6, int := 24: y
+v7 t7, int := 26: (+ x y z)
+v8 j8, int := 27: 36
+v9 j9, int := 28: (mod (+ x y z) 36)
+v10 j10, int := 47: (div (+ x y z) 36)
+v11 t11, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13, int := 31: 42
+v14 j14, int := 32: (mod (+ x y z) 42)
+v15 j15, int := 58: (div (+ x y z) 42)
+v16 t16, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+------------------------------------------------
+-------- [arith] random_update ../src/smt/theory_lra.cpp:1479 ---------
+
+------------------------------------------------
+-------- [arith] init_variable_values ../src/smt/theory_lra.cpp:1435 ---------
+update variable values 1
+Theory arithmetic:
+number of constraints = 34
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+irr: v0 j0 = 1, int := 39: 1
+irr: v1 j1 = 1 := 41: 1.0
+v2 j2 = 0, int := 45: 0
+irr: v3 j3 = 0 := 46: 0.0
+v4 j4 = 10, int := 25: z
+v5 j5 = 0, int := 23: x
+v6 j6 = 0, int := 24: y
+v7 t7 = 10, int := 26: (+ x y z)
+v8 j8 = 36, int := 27: 36
+v9 j9 = 10, int := 28: (mod (+ x y z) 36)
+v10 j10 = 0, int := 47: (div (+ x y z) 36)
+v11 t11 = 10, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12 = 0, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13 = 42, int := 31: 42
+v14 j14 = 10, int := 32: (mod (+ x y z) 42)
+v15 j15 = 0, int := 58: (div (+ x y z) 42)
+v16 t16 = 10, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17 = 0, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+1 := 1
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+1.0 := 1
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+0 := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+0.0 := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+z := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+x := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+y := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ x y z) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+36 := 36
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(mod (+ x y z) 36) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(div (+ x y z) 36) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (+ (+ x y z) (* (- 1) a!1))) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+42 := 42
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(mod (+ x y z) 42) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(div (+ x y z) 42) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42)) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (+ (+ x y z) (* (- 1) a!1))) := 0
+------------------------------------------------
+-------- [arith] init_model ../src/smt/theory_lra.cpp:3265 ---------
+Theory arithmetic:
+number of constraints = 34
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+irr: v0 j0 = 1, int := 39: 1
+irr: v1 j1 = 1 := 41: 1.0
+v2 j2 = 0, int := 45: 0
+irr: v3 j3 = 0 := 46: 0.0
+v4 j4 = 10, int := 25: z
+v5 j5 = 0, int := 23: x
+v6 j6 = 0, int := 24: y
+v7 t7 = 10, int := 26: (+ x y z)
+v8 j8 = 36, int := 27: 36
+v9 j9 = 10, int := 28: (mod (+ x y z) 36)
+v10 j10 = 0, int := 47: (div (+ x y z) 36)
+v11 t11 = 10, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12 = 0, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13 = 42, int := 31: 42
+v14 j14 = 10, int := 32: (mod (+ x y z) 42)
+v15 j15 = 0, int := 58: (div (+ x y z) 42)
+v16 t16 = 10, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17 = 0, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+1 v0 := 1
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+1.0 v1 := 1
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+0 v2 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+0.0 v3 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+z v4 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+x v5 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+y v6 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+36 v8 := 36
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(mod (+ x y z) 36) v9 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(div (+ x y z) 36) v10 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) v11 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (+ (+ x y z) (* (- 1) a!1))) v12 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+42 v13 := 42
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(mod (+ x y z) 42) v14 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(div (+ x y z) 42) v15 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (+ (+ x y z) (* (- 1) a!1))) v17 := 0
+------------------------------------------------
+-------- [arith] push_scope_eh ../src/smt/theory_lra.cpp:1046 ---------
+push
+------------------------------------------------
+-------- [arith] pop_scope_eh ../src/smt/theory_lra.cpp:1060 ---------
+pop 1
+------------------------------------------------
+-------- [arith] pop_scope_eh ../src/smt/theory_lra.cpp:1076 ---------
+num scopes: 1 new scope level: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(- 1) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* (- 1) x) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(- 1) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(* (- 1) y) internalized: 0
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ (* (- 1) x) (* (- 1) y)) internalized: 0
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ (* -1 x) (* -1 y)) v18
+------------------------------------------------
+-------- [arith] mk_ge ../src/smt/theory_lra.cpp:3652 ---------
+v18
+Theory arithmetic:
+number of constraints = 34
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ - j5 - j6
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+ +  j5 +  j6 +  t18 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+[18]    := (0, 0) base          [-oo, oo]
+- j5 - j6
+irr: v0 j0, int := 39: 1
+irr: v1 j1 := 41: 1.0
+v2 j2, int := 45: 0
+irr: v3 j3 := 46: 0.0
+v4 j4, int := 25: z
+v5 j5, int := 23: x
+v6 j6, int := 24: y
+v7 t7, int := 26: (+ x y z)
+v8 j8, int := 27: 36
+v9 j9, int := 28: (mod (+ x y z) 36)
+v10 j10, int := 47: (div (+ x y z) 36)
+v11 t11, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13, int := 31: 42
+v14 j14, int := 32: (mod (+ x y z) 42)
+v15 j15, int := 58: (div (+ x y z) 42)
+v16 t16, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+irr: v18 t18, int := 44: (+ (* -1 x) (* -1 y))
+------------------------------------------------
+-------- [arith] term2coeffs ../src/smt/theory_lra.cpp:3565 ---------
+ - j5 - j6
+------------------------------------------------
+-------- [arith] term2coeffs ../src/smt/theory_lra.cpp:3578 ---------
+5: 5
+------------------------------------------------
+-------- [arith] term2coeffs ../src/smt/theory_lra.cpp:3578 ---------
+6: 6
+------------------------------------------------
+-------- [arith] updt_unassigned_bounds ../src/smt/theory_lra.cpp:750 ---------
+v18 0 += 1
+------------------------------------------------
+-------- [arith] mk_ge ../src/smt/theory_lra.cpp:3673 ---------
+internalized 14: (>= (+ (* (- 1) x) (* (- 1) y)) 0)
+------------------------------------------------
+-------- [arith] mk_ge ../src/smt/theory_lra.cpp:3678 ---------
+(>= (+ (* (- 1) x) (* (- 1) y)) 0)
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2503 ---------
+flush bound axioms
+------------------------------------------------
+-------- [arith] push_scope_eh ../src/smt/theory_lra.cpp:1046 ---------
+push
+------------------------------------------------
+-------- [arith] push_scope_eh ../src/smt/theory_lra.cpp:1046 ---------
+push
+------------------------------------------------
+-------- [arith] final_check_eh ../src/smt/theory_lra.cpp:1568 ---------
+Theory arithmetic:
+number of constraints = 36
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ - j5 - j6
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+ +  j5 +  j6 +  t18 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+[18]    := (0, 0) base          [-oo, oo]
+- j5 - j6
+irr: v0 j0, int := 39: 1
+irr: v1 j1 := 41: 1.0
+v2 j2, int := 45: 0
+irr: v3 j3 := 46: 0.0
+v4 j4, int := 25: z
+v5 j5, int := 23: x
+v6 j6, int := 24: y
+v7 t7, int := 26: (+ x y z)
+v8 j8, int := 27: 36
+v9 j9, int := 28: (mod (+ x y z) 36)
+v10 j10, int := 47: (div (+ x y z) 36)
+v11 t11, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13, int := 31: 42
+v14 j14, int := 32: (mod (+ x y z) 42)
+v15 j15, int := 58: (div (+ x y z) 42)
+v16 t16, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+irr: v18 t18, int := 44: (+ (* -1 x) (* -1 y))
+------------------------------------------------
+-------- [arith] check_lia ../src/smt/theory_lra.cpp:1899 ---------
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 42) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(div (+ x y z) 42) v15
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ x y z) v7
+------------------------------------------------
+-------- [arith] check_idiv_bounds ../src/smt/theory_lra.cpp:1753 ---------
+unbounded (div (+ x y z) 42)
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(div (+ x y z) 36) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(div (+ x y z) 36) v10
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith] mk_enode ../src/smt/theory_lra.cpp:546 ---------
+(+ x y z) internalized: 1
+------------------------------------------------
+-------- [arith] internalize_linearized_def ../src/smt/theory_lra.cpp:804 ---------
+(+ x y z) v7
+------------------------------------------------
+-------- [arith] check_idiv_bounds ../src/smt/theory_lra.cpp:1753 ---------
+unbounded (div (+ x y z) 36)
+------------------------------------------------
+-------- [arith] check_nla ../src/smt/theory_lra.cpp:2047 ---------
+no nla
+------------------------------------------------
+-------- [arith] assume_eqs ../src/smt/theory_lra.cpp:1486 ---------
+Theory arithmetic:
+number of constraints = 36
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ - j5 - j6
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+ +  j5 +  j6 +  t18 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+[18]    := (0, 0) base          [-oo, oo]
+- j5 - j6
+irr: v0 j0, int := 39: 1
+irr: v1 j1 := 41: 1.0
+v2 j2, int := 45: 0
+irr: v3 j3 := 46: 0.0
+v4 j4, int := 25: z
+v5 j5, int := 23: x
+v6 j6, int := 24: y
+v7 t7, int := 26: (+ x y z)
+v8 j8, int := 27: 36
+v9 j9, int := 28: (mod (+ x y z) 36)
+v10 j10, int := 47: (div (+ x y z) 36)
+v11 t11, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13, int := 31: 42
+v14 j14, int := 32: (mod (+ x y z) 42)
+v15 j15, int := 58: (div (+ x y z) 42)
+v16 t16, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+irr: v18 t18, int := 44: (+ (* -1 x) (* -1 y))
+------------------------------------------------
+-------- [arith] random_update ../src/smt/theory_lra.cpp:1479 ---------
+
+------------------------------------------------
+-------- [arith] init_variable_values ../src/smt/theory_lra.cpp:1435 ---------
+update variable values 1
+Theory arithmetic:
+number of constraints = 36
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ - j5 - j6
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+ +  j5 +  j6 +  t18 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+[18]    := (0, 0) base          [-oo, oo]
+- j5 - j6
+irr: v0 j0 = 1, int := 39: 1
+irr: v1 j1 = 1 := 41: 1.0
+v2 j2 = 0, int := 45: 0
+irr: v3 j3 = 0 := 46: 0.0
+v4 j4 = 10, int := 25: z
+v5 j5 = 0, int := 23: x
+v6 j6 = 0, int := 24: y
+v7 t7 = 10, int := 26: (+ x y z)
+v8 j8 = 36, int := 27: 36
+v9 j9 = 10, int := 28: (mod (+ x y z) 36)
+v10 j10 = 0, int := 47: (div (+ x y z) 36)
+v11 t11 = 10, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12 = 0, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13 = 42, int := 31: 42
+v14 j14 = 10, int := 32: (mod (+ x y z) 42)
+v15 j15 = 0, int := 58: (div (+ x y z) 42)
+v16 t16 = 10, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17 = 0, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+irr: v18 t18 = 0, int := 44: (+ (* -1 x) (* -1 y))
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+1 := 1
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+1.0 := 1
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+0 := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+0.0 := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+z := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+x := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+y := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ x y z) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+36 := 36
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(mod (+ x y z) 36) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(div (+ x y z) 36) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (+ (+ x y z) (* (- 1) a!1))) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+42 := 42
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(mod (+ x y z) 42) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(div (+ x y z) 42) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42)) := 10
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (+ (+ x y z) (* (- 1) a!1))) := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3333 ---------
+(+ (* (- 1) x) (* (- 1) y)) := 0
+------------------------------------------------
+-------- [arith] init_model ../src/smt/theory_lra.cpp:3265 ---------
+Theory arithmetic:
+number of constraints = 36
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ - j5 - j6
+ -  j4 -  j5 -  j6 +  t7 = 0
+ -  j4 -  j5 -  j6 +  t11 = 0
+ -  j4 -  j5 -  j6 +  j9 +  36j10 = 0
+ -  j4 -  j5 -  j6 +  t16 = 0
+ -  j4 -  j5 -  j6 +  j14 +  42j15 = 0
+ +  j5 +  j6 +  t18 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0) base         [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+[18]    := (0, 0) base          [-oo, oo]
+- j5 - j6
+irr: v0 j0 = 1, int := 39: 1
+irr: v1 j1 = 1 := 41: 1.0
+v2 j2 = 0, int := 45: 0
+irr: v3 j3 = 0 := 46: 0.0
+v4 j4 = 10, int := 25: z
+v5 j5 = 0, int := 23: x
+v6 j6 = 0, int := 24: y
+v7 t7 = 10, int := 26: (+ x y z)
+v8 j8 = 36, int := 27: 36
+v9 j9 = 10, int := 28: (mod (+ x y z) 36)
+v10 j10 = 0, int := 47: (div (+ x y z) 36)
+v11 t11 = 10, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12 = 0, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13 = 42, int := 31: 42
+v14 j14 = 10, int := 32: (mod (+ x y z) 42)
+v15 j15 = 0, int := 58: (div (+ x y z) 42)
+v16 t16 = 10, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17 = 0, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+irr: v18 t18 = 0, int := 44: (+ (* -1 x) (* -1 y))
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+1 v0 := 1
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+1.0 v1 := 1
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+0 v2 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+0.0 v3 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+z v4 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+x v5 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+y v6 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+36 v8 := 36
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(mod (+ x y z) 36) v9 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(div (+ x y z) 36) v10 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36)) v11 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(let ((a!1 (+ (* 36 (div (+ x y z) 36)) (mod (+ x y z) 36))))
+  (+ (+ x y z) (* (- 1) a!1))) v12 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+42 v13 := 42
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(mod (+ x y z) 42) v14 := 10
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(div (+ x y z) 42) v15 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3321 ---------
+(let ((a!1 (+ (* 42 (div (+ x y z) 42)) (mod (+ x y z) 42))))
+  (+ (+ x y z) (* (- 1) a!1))) v17 := 0
+------------------------------------------------
+-------- [arith] maximize ../src/smt/theory_lra.cpp:3522 ---------
+UNBOUNDED v18 vi: 2147483653
+Theory arithmetic:
+number of constraints = 36
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j8 >= 36
+(9) j8 <= 36
+(10) j9 >= 4
+(12)  - j9 - 36j10 + j4 + j5 + j6 <= 0
+(14)  - j9 - 36j10 + j4 + j5 + j6 >= 0
+(16) j9 >= 0
+(18) j9 <= 35
+(20) j13 >= 42
+(21) j13 <= 42
+(22) j14 <= 20
+(24) j6 + j4 + j5 - j14 - 42j15 <= 0
+(26) j6 + j4 + j5 - j14 - 42j15 >= 0
+(28) j14 >= 0
+(30) j14 <= 41
+(32) j4 >= 10
+j4 + j5 + j6
+j9 + 36j10
+ - j9 - 36j10 + j4 + j5 + j6
+j14 + 42j15
+j6 + j4 + j5 - j14 - 42j15
+ - j5 - j6
+ +  t7 -  j9 -  36j10 = 0
+ -  j9 -  36j10 +  t11 = 0
+ +  j4 +  j5 +  j6 -  j9 -  36j10 = 0
+ -  j9 -  36j10 +  t16 = 0
+ -  j9 -  36j10 +  j14 +  42j15 = 0
+ -  j4 +  j9 +  36j10 +  t18 = 0
+
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (10, 0)              [(10, 0), oo]
+[5]    := (0, 0) base          [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (10, 0) base         [-oo, oo]
+j4 + j5 + j6
+[8]    := (36, 0)              [(36, 0), (36, 0)]
+[9]    := (10, 0)              [(4, 0), (35, 0)]
+[10]    := (0, 0)               [-oo, oo]
+[11]    := (10, 0) base         [-oo, oo]
+j9 + 36j10
+[12]    := (0, 0)               [(0, 0), (0, 0)]
+- j9 - 36j10 + j4 + j5 + j6
+[13]    := (42, 0)              [(42, 0), (42, 0)]
+[14]    := (10, 0) base         [(0, 0), (20, 0)]
+[15]    := (0, 0)               [-oo, oo]
+[16]    := (10, 0) base         [-oo, oo]
+j14 + 42j15
+[17]    := (0, 0)               [(0, 0), (0, 0)]
+j6 + j4 + j5 - j14 - 42j15
+[18]    := (0, 0) base          [-oo, oo]
+- j5 - j6
+irr: v0 j0 = 1, int := 39: 1
+irr: v1 j1 = 1 := 41: 1.0
+v2 j2 = 0, int := 45: 0
+irr: v3 j3 = 0 := 46: 0.0
+v4 j4 = 10, int := 25: z
+v5 j5 = 0, int := 23: x
+v6 j6 = 0, int := 24: y
+v7 t7 = 10, int := 26: (+ x y z)
+v8 j8 = 36, int := 27: 36
+v9 j9 = 10, int := 28: (mod (+ x y z) 36)
+v10 j10 = 0, int := 47: (div (+ x y z) 36)
+v11 t11 = 10, int := 49: (+ (* 36 (div #26 36)) (mod (+ x y z) 36))
+v12 t12 = 0, int := 52: (+ (+ x y z) (* -1 (+ #48 #28)))
+v13 j13 = 42, int := 31: 42
+v14 j14 = 10, int := 32: (mod (+ x y z) 42)
+v15 j15 = 0, int := 58: (div (+ x y z) 42)
+v16 t16 = 10, int := 60: (+ (* 42 (div #26 42)) (mod (+ x y z) 42))
+v17 t17 = 0, int := 63: (+ (+ x y z) (* -1 (+ #59 #32)))
+irr: v18 t18 = 0, int := 44: (+ (* -1 x) (* -1 y))
+------------------------------------------------
+-------- [arith] pop_scope_eh ../src/smt/theory_lra.cpp:1060 ---------
+pop 1
+------------------------------------------------
+-------- [arith] pop_scope_eh ../src/smt/theory_lra.cpp:1076 ---------
+num scopes: 1 new scope level: 1
+------------------------------------------------
+-------- [arith] pop_scope_eh ../src/smt/theory_lra.cpp:1060 ---------
+pop 1
+------------------------------------------------
+-------- [arith] pop_scope_eh ../src/smt/theory_lra.cpp:1076 ---------
+num scopes: 1 new scope level: 0
+------------------------------------------------

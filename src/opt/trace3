@@ -1,0 +1,54 @@
+-------- [opt] to_fmls ../src/opt/opt_context.cpp:1298 ---------
+
+(= (* 2.0 a) 1.0)
+(= (* b b) 2.0)
+(> b a)
+(minimize!!0 a)
+------------------------------------------------
+-------- [opt] simplify_fmls ../src/opt/opt_context.cpp:891 ---------
+(goal
+  (= (* 2.0 a) 1.0)
+  (= (* b b) 2.0)
+  (> b a)
+  (minimize!!0 a))
+------------------------------------------------
+-------- [opt] simplify_fmls ../src/opt/opt_context.cpp:896 ---------
+(model-add a () Real (/ 1.0 2.0))
+------------------------------------------------
+-------- [opt] from_fmls ../src/opt/opt_context.cpp:1092 ---------
+
+(= (* b b) 2.0)
+(not (<= b (/ 1.0 2.0)))
+(minimize!!0 (/ 1.0 2.0))
+------------------------------------------------
+-------- [opt] is_maxsat ../src/opt/opt_context.cpp:985 ---------
+try to convert minimization
+(/ 1.0 2.0)
+------------------------------------------------
+-------- [opt] is_maxsat ../src/opt/opt_context.cpp:1007 ---------
+Convert minimization a
+to maxsat: (/ 1.0 2.0)
+offset: 1/2
+------------------------------------------------
+-------- [opt] from_fmls ../src/opt/opt_context.cpp:1123 ---------
+maxsat: 0 a:0 offset: 1/2
+
+------------------------------------------------
+-------- [opt] optimize ../src/opt/opt_context.cpp:324 ---------
+initial search result: l_true
+(declare-fun b () Real)
+(assert (= (* b b) 2.0))
+(assert (not (<= b (/ 1.0 2.0))))
+------------------------------------------------
+-------- [opt] optimize ../src/opt/opt_context.cpp:342 ---------
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+------------------------------------------------
+-------- [opt] update_bound ../src/opt/opt_context.cpp:1374 ---------
+update upper from 0 to 1/2
+------------------------------------------------
+-------- [opt] init ../src/opt/maxlex.cpp:136 ---------
+(define-fun b () Real
+  (root-obj (+ (^ x 2) (- 2)) 2))
+
+------------------------------------------------
